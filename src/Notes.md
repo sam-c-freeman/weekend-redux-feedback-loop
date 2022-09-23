@@ -1,7 +1,5 @@
 # To-Do:
 
-* Do I actually want radio buttons to submit?  Before submission?
-
 * Styling 
     * cards
     * breadcrumbs?
@@ -20,6 +18,8 @@
 
 
 # Stretch Goals
+
+* Do I actually want radio buttons to clear?  Before submission?
 
 ## Admin Page
 

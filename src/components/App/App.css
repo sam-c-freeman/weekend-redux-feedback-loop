@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #005f73;
   min-height: 70px;
   padding: 20px;
   color: white;
@@ -22,8 +22,21 @@ h4 {
   font-style: italic;
 }
 
+body{
+  background-color: #edf6f9;
+}
+
 table {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+
+.card{
+  margin: auto;
+  margin-top: 30px;
+}
+
+.button{
+  margin-top: 20px;
 }
