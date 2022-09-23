@@ -27,6 +27,13 @@ const understandingRating = (state=[], action) =>{
         return state;
 }
 
+const supportedRating = (state=[], action) =>{
+    if(action.type === 'SET_SUPPORTED'){
+        return Number(action.payload);
+        
+    }
+        return state;
+}
 
 
 
@@ -35,7 +42,8 @@ const storeInstance = createStore(
     combineReducers(
         {
             feelingRating,
-            understandingRating
+            understandingRating,
+            supportedRating
         }
     ),
     applyMiddleware(logger)
