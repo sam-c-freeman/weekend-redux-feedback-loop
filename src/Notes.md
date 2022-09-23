@@ -2,8 +2,8 @@
 
 * Do I actually want radio buttons to submit?  Before submission?
 
-* Compile object for server side post route
-* Make review page
+* Make submit go to confirmation page
+* Make confirmation page
 * Make post route
 * Need to require fields
 * Need to have confirmation page
