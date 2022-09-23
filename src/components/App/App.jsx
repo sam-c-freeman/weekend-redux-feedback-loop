@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import FeelingForm from '../FeelingForm/FeelingForm';
+import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <FeelingForm />
+      <UnderstandingForm/>
     </div>
   );
 }
