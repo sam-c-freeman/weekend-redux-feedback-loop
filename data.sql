@@ -3,7 +3,7 @@ CREATE DATABASE "prime_feedback";
 
 -- Switch to "prime_feedback" before making:
 -- Table to store the feedback
-CREATE TABLE "feedback" (
+CREATE TABLE "prime_feedback" (
   "id" serial primary key,
   "feeling" INT not null,
   "understanding" INT not null,
@@ -14,5 +14,5 @@ CREATE TABLE "feedback" (
 ); 
 
 -- Sample feedback item
-INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+INSERT INTO "prime_feedback" ("feeling", "understanding", "support", "comments")
 VALUES (4, 4, 5, 'Doing Great!');
