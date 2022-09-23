@@ -6,6 +6,8 @@
 * Make review page
 * Make post route
 
+* UPDATE LINKEDIN <----------
+
 
 ## Admin Page
 
