@@ -12,6 +12,10 @@ function UnderstandingForm (){
 
     const submit = () =>{
         event.preventDefault();
+        if(understandingRating === ''){
+            alert('You must select a value!')
+        } 
+        else {
         const action = {
             type: 'SET_UNDERSTANDING',
             payload: understandingRating
@@ -20,6 +24,7 @@ function UnderstandingForm (){
         history.push("/supported");
         
     }
+}
 
     const handleChange = (event) => {
         setUnderstandingRating(event.target.value);
