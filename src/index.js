@@ -14,7 +14,15 @@ import logger from 'redux-logger';
 const feelingRating = (state=[], action) =>{
     if(action.type === 'SET_FEELING'){
         return Number(action.payload);
-        //Number?
+        //Number right approach for DB?
+    }
+        return state;
+}
+
+const understandingRating = (state=[], action) =>{
+    if(action.type === 'SET_UNDERSTANDING'){
+        return Number(action.payload);
+        
     }
         return state;
 }
@@ -27,6 +35,7 @@ const storeInstance = createStore(
     combineReducers(
         {
             feelingRating,
+            understandingRating
         }
     ),
     applyMiddleware(logger)
