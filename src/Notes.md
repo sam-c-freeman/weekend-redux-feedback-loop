@@ -15,6 +15,7 @@
 * Mobile?
 
 
+
 * UPDATE LINKEDIN <----------
 
 
@@ -22,6 +23,7 @@
 
 ## Admin Page
 
-* Need to make a GET route for this page
-* Make table
+
+* Table color?  Related to theme?
 * Make delete route
+* refresh button?

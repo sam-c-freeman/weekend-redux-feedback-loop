@@ -14,6 +14,7 @@ import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import Review from '../Review/Review';
 import ConfirmPage from '../ConfirmPage/ConfirmPage';
+import Admin from '../Admin/Admin';
 
 function App() {
 
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route exact path="/confirm">
           <ConfirmPage />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
       </Router>
 

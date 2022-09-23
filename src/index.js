@@ -59,6 +59,13 @@ const comments = (state=[], action) =>{
         return state;
 }
 
+const feedback = (state=[], action) => {
+    if(action.type === 'GET_FEEDBACK'){
+        return action.payload
+    }
+        return state;
+}
+
 
 
 //Create Store
@@ -68,7 +75,8 @@ const storeInstance = createStore(
             feelingRating,
             understandingRating,
             supportedRating,
-            comments
+            comments,
+            feedback
         }
     ),
     applyMiddleware(logger)
