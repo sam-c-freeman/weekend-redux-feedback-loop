@@ -8,8 +8,11 @@
     * buttons
     * inputs
     * header/header component
+    * pick color theme
+    * modal instead of alert?
 
 * What do I want on confirmation page?
+* Mobile?
 
 
 * UPDATE LINKEDIN <----------

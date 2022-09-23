@@ -12,6 +12,10 @@ function SupportedForm (){
 
     const submit = () =>{
         event.preventDefault();
+        if(supportedRating === ''){
+            alert('You must select a value!')
+        } 
+        else {
         const action = {
             type: 'SET_SUPPORTED',
             payload: supportedRating
@@ -19,7 +23,7 @@ function SupportedForm (){
         dispatch(action);
         history.push("/comments");
         
-    }
+    }}
 
     const handleChange = (event) => {
         setSupportedRating(event.target.value);

@@ -12,6 +12,10 @@ function FeelingForm (){
 
     const submit = () =>{
         event.preventDefault();
+        if(feelingRating === ''){
+            alert('You must select a value!')
+        } 
+        else {
         const action = {
             type: 'SET_FEELING',
             payload: feelingRating
@@ -19,6 +23,7 @@ function FeelingForm (){
         dispatch(action);
         history.push("/understanding");
     }
+}
 
     const handleChange = (event) => {
         setFeelingRating(event.target.value);
