@@ -8,6 +8,7 @@ function UnderstandingForm (){
     //How will I clear it?
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const submit = () =>{
         event.preventDefault();
@@ -16,6 +17,7 @@ function UnderstandingForm (){
             payload: understandingRating
         }
         dispatch(action);
+        history.push("/supported");
         
     }
 

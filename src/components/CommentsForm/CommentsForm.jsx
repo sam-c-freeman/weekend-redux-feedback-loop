@@ -8,6 +8,7 @@ function CommentsForm (){
     //How will I clear it?
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleSubmit = () =>{
         event.preventDefault();
@@ -17,6 +18,7 @@ function CommentsForm (){
         }
         dispatch(action);
         setComments('');
+        history.push("/review");
         
     }
 
