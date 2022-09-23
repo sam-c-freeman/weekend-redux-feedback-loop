@@ -8,6 +8,7 @@ function FeelingForm (){
     //How will I clear it?
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const submit = () =>{
         event.preventDefault();
@@ -16,7 +17,7 @@ function FeelingForm (){
             payload: feelingRating
         }
         dispatch(action);
-        
+        history.push("/understanding");
     }
 
     const handleChange = (event) => {
