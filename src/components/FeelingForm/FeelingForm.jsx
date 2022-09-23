@@ -6,8 +6,17 @@ function FeelingForm (){
     const[feelingRating, setFeelingRating] = useState('');
     //what should default rating be?
     //How will I clear it?
+
+    const dispatch = useDispatch();
+
     const handleNext = () =>{
-        console.log(feelingRating);
+        event.preventDefault();
+        const action = {
+            type: 'SET_FEELING',
+            payload: feelingRating
+        }
+        dispatch(action);
+        
     }
 
     return(
