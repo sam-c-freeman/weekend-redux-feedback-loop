@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import {useState} from 'react';
+import axios from 'axios';
 
 function Review () {
    const dispatch = useDispatch();
@@ -21,6 +22,23 @@ const [feedbackObject, setFeedbackObject] = useState({
                                                 support: supported,
                                                 comments: comments
 })
+
+//POST route
+const sendFeedback = () => {
+    axios({
+        method: 'POST',
+        url: '/feedback',
+        data: feedbackObject
+    })
+    .then((response) => {
+        console.log('Post worked client side', response);
+        history.push('/confirm');
+        
+    })
+    .catch((error) => {
+        console.log('Error in post route client side', error);
+    })
+};
     
 console.log(feedbackObject);
     return(
@@ -30,7 +48,7 @@ console.log(feedbackObject);
         <p>Understanding: {understanding}</p>
         <p>Support: {supported}</p>
         <p>Comments: {comments}</p>
-        <button>Submit</button>
+        <button onClick={sendFeedback}>Submit</button>
 
         </>
 
