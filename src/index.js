@@ -16,12 +16,20 @@ const feelingRating = (state=[], action) =>{
         return Number(action.payload);
         //Number right approach for DB?
     }
+    if(action.type === 'CLEAR'){
+        return [];
+        
+    }
         return state;
 }
 
 const understandingRating = (state=[], action) =>{
     if(action.type === 'SET_UNDERSTANDING'){
         return Number(action.payload);
+        
+    }
+    if(action.type === 'CLEAR'){
+        return [];
         
     }
         return state;
@@ -32,12 +40,20 @@ const supportedRating = (state=[], action) =>{
         return Number(action.payload);
         
     }
+    if(action.type === 'CLEAR'){
+        return [];
+        
+    }
         return state;
 }
 
 const comments = (state=[], action) =>{
     if(action.type === 'SET_COMMENTS'){
         return action.payload;
+        
+    }
+    if(action.type === 'CLEAR'){
+        return [];
         
     }
         return state;
