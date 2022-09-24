@@ -20,7 +20,7 @@ function ConfirmPage () {
         <Card sx={{ maxWidth: 350 }} className="card">
             <CardContent>
                 <p>Thank you!  Your feedback was submitted!</p>
-                <Button variant="outlined" onClick={startAgain}>Leave New Feedback</Button>
+                <Button variant="outlined" size="small" onClick={startAgain}>Leave New Feedback</Button>
             </CardContent>
         </Card>
     )

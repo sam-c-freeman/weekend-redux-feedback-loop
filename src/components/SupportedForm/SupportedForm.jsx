@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 function SupportedForm (){
     const[supportedRating, setSupportedRating] = useState('');
@@ -74,8 +75,10 @@ function SupportedForm (){
                                 onChange={handleChange}
                                 name="supported"/> 5
                         </div>
-                        <Button variant="outlined" type="reset" onClick={resetRadioButtons}>Next</Button>
-            </form>
+                        <Box className="button">
+                            <Button variant="outlined" type="reset" size="small" onClick={resetRadioButtons}>Next</Button>
+                        </Box>
+          </form>
         </CardContent>
     </Card>
     );

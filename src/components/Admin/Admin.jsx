@@ -72,8 +72,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
             
         </Box>
                     <Box className="table">
-                        <TableContainer component={Paper} className="adminTable">
-                            <Table sx={{maxWidth: 1000}} aria-label="admin table">
+                        <TableContainer className="adminTable">
+                            <Table sx={{maxWidth: 800}} aria-label="admin table">
                                 <TableHead>
                                     <TableRow>
                                         <StyledTableCell>Feeling</StyledTableCell>

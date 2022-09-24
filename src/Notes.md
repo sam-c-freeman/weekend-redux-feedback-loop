@@ -1,10 +1,9 @@
 # To-Do:
 
 * Styling 
-    * cards
+    
     * breadcrumbs?
-    * buttons
-    * inputs
+    * table styling?
     * header/header component
     * pick color theme
     * modal instead of alert?

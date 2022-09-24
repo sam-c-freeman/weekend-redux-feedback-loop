@@ -4,6 +4,8 @@ import {useDispatch} from 'react-redux';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 function CommentsForm (){
     const[comments, setComments] = useState('');
@@ -29,14 +31,18 @@ function CommentsForm (){
     return(
         <Card sx={{ maxWidth: 350 }} className="card">
             <CardContent>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <p>Any comments you want to leave? </p>
-                        <input
+                        <TextField
                         type="text"
+                        multiline
+                        rows={3}
                         placeholder="Comments Go Here"
                         value={comments}
                         onChange={(event) => setComments(event.target.value)}/>
-                        <Button variant="outlined">Next</Button>
+                        <Box className='button'>
+                            <Button variant="outlined" size="small" onClick={handleSubmit}>Next</Button>
+                        </Box>
                 </form>
             </CardContent>
         </Card>

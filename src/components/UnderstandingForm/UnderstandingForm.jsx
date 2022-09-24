@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 function UnderstandingForm (){
     const[understandingRating, setUnderstandingRating] = useState('');
@@ -75,7 +76,9 @@ function UnderstandingForm (){
                                 onChange={handleChange}
                                 name="understanding"/> 5
                         </div>
-                        <Button variant="outlined" type="reset" onClick={resetRadioButtons}>Next</Button>
+                        <Box className="button">
+                            <Button variant="outlined" type="reset" size="small" onClick={resetRadioButtons}>Next</Button>
+                        </Box>
                 </form>
          </CardContent>
         </Card>
