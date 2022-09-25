@@ -25,9 +25,11 @@ router.post('/', (req, res) => {
 //GET route for admin page
 
 router.get('/', (req, res) => {
-    pool.query(`SELECT * FROM "prime_feedback"
-                    ORDER BY "id" DESC;
-    `)
+    pool.query(
+        `SELECT *, to_char("date", 'Mon DD YYYY') 
+            AS "formatted_date" FROM "prime_feedback"
+            ORDER BY "id" DESC;`
+    )
     .then((result)=> {
         res.send(result.rows);
 })

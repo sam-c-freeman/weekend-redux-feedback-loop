@@ -84,12 +84,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     
     return(
         <>
-       
+                <h3>Admin Table</h3>
                     <Box className="table">
                         <TableContainer className="adminTable" component={Card} sx={{maxWidth: 900}} >
                             <Table sx={{maxWidth: 800}} aria-label="admin table">
                                 <TableHead>
                                     <TableRow>
+                                        <StyledTableCell>Date</StyledTableCell>
                                         <StyledTableCell>Feeling</StyledTableCell>
                                         <StyledTableCell align="left">Comprehension</StyledTableCell>
                                         <StyledTableCell align="left">Support</StyledTableCell>
@@ -101,6 +102,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
                                     {feedback.map(oneFeedback => {
                                         return(
                                             <StyledTableRow key={oneFeedback.id}>
+                                                <StyledTableCell>{oneFeedback.formatted_date}</StyledTableCell>
                                                 <StyledTableCell>{oneFeedback.feeling}</StyledTableCell>
                                                 <StyledTableCell>{oneFeedback.understanding}</StyledTableCell>
                                                 <StyledTableCell>{oneFeedback.support}</StyledTableCell>
