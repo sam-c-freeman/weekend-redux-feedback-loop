@@ -12,6 +12,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from "@mui/material/Box";
+import Card from '@mui/material/Card';
+
+
 
 
 function Admin () {
@@ -42,6 +45,20 @@ const getFeedback = () => {
     })
 }
 
+const deleteFeedback = (id) => {
+    axios ({
+        method: 'DELETE',
+        url: `/feedback/${id}`,
+    })
+    .then((response) => {
+        getFeedback();
+    })
+    .catch((error) =>{
+        console.log('error deleting feedback', error);
+    })
+    
+};
+
 //styling for table
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -67,13 +84,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     
     return(
         <>
-        <Box className="button">
-            {/* <Button onClick={getOrders}>Get New Orders!</Button> */}
-            
-        </Box>
+       
                     <Box className="table">
-                        <TableContainer component={Paper} className="adminTable">
-                            <Table sx={{maxWidth: 1000}} aria-label="admin table">
+                        <TableContainer className="adminTable" component={Card} sx={{maxWidth: 900}} >
+                            <Table sx={{maxWidth: 800}} aria-label="admin table">
                                 <TableHead>
                                     <TableRow>
                                         <StyledTableCell>Feeling</StyledTableCell>
@@ -91,7 +105,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
                                                 <StyledTableCell>{oneFeedback.understanding}</StyledTableCell>
                                                 <StyledTableCell>{oneFeedback.support}</StyledTableCell>
                                                 <StyledTableCell>{oneFeedback.comments}</StyledTableCell>
-                                                <StyledTableCell><button>Delete</button></StyledTableCell>
+                                                <StyledTableCell><Button onClick={ () => deleteFeedback(oneFeedback.id)} variant="outlined" size="small" color="secondary">Delete</Button></StyledTableCell>
                                             </StyledTableRow>
                                         );
                                     })}

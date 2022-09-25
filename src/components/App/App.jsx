@@ -25,7 +25,7 @@ function App() {
       <Router>
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
-          <h4>Don't forget it!</h4>
+          <h4>Please take a second to fill out the feedback survey:</h4>
         </header>
         <Route exact path="/">
           <FeelingForm />

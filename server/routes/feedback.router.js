@@ -37,4 +37,20 @@ router.get('/', (req, res) => {
     })
 })
 
+router.delete('/:id', (req,res) => {
+    const sqlText = `
+        DELETE FROM "prime_feedback"
+        WHERE id=$1;
+    `
+    const sqlValues =[req.params.id];
+    pool.query(sqlText,sqlValues)
+        .then((dbRes) => {
+            res.sendStatus(200);
+        })
+        .catch((dbErr) => {
+            console.log('error in deleting feedback', dbErr);
+        })
+})
+
+
 module.exports = router;
