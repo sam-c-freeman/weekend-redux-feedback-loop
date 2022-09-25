@@ -3,9 +3,9 @@
 * Styling 
     
     * breadcrumbs?
-    * table styling?
+  
     * header/header component
-    * pick color theme
+  
     * modal instead of alert?
 
 * What do I want on confirmation page?
@@ -24,5 +24,4 @@
 
 
 * Table color?  Related to theme?
-* Make delete route
 * refresh button?
