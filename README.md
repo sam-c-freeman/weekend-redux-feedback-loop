@@ -9,6 +9,10 @@ This app gathers daily student feedback to assess how they are feeling, how well
 
 To see my repository, please visit: [GitHub Repository](https://github.com/sam-c-freeman/weekend-redux-feedback-loop)
 
+To see my app, please visit: [Heroku Hosted App](https://blooming-plains-82646.herokuapp.com/#/)
+
+
+
 ## Screen Shots
 
 <img src="appPhotos/FeedbackHome.png"/>
